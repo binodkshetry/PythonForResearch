@@ -1,0 +1,18 @@
+
+        - Learn about Project Gutenberg, the oldest digital library of books
+        -Get an overview of the language processing tasks we will accomplish in this case study
+        
+        first: 
+        we will - 
+        Learn how to write your own function to count the number of times a unique word appears in a given string text
+        Learn about how to use the Counter tool from the collections module to accomplish the same task
+
+
+        functions to keep track of all theh unique words: 
+        
+        
+        text = "this contains strings to check the function that counts the unique words"
+        def count_words(text): 
+              wordcount = {}
+              
+        

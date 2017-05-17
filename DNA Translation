@@ -545,6 +545,6 @@ len(dna)
 print(len(dna))
 
 print(translate(dna[20:938]))
-prt == translate(dna[20:935])
+prt == translate(dna[20:935]) == translate(dna[20:938])[:-1]
 
 

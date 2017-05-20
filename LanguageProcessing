@@ -9,10 +9,86 @@
 
 
         functions to keep track of all theh unique words: 
-        
-        
-        text = "this contains strings to check the function that counts the unique words"
-        def count_words(text): 
-              wordcount = {}
+       step 1: counting words       
+        text = "This is the text. This contains strings to check the method that counts the unique words in text"
+                def count_words(text):
+                    """count the number of times each word occurs in text(str)l. Return dictionary
+                    where keys are unique words and values are word counts"""
+                    word_count = {}
+                    for word in text.split(" "):
+                        if word in word_count:
+                            word_count[word] += 1
+                        else:
+                            word_count[word] = 1
+                    return word_count
+                CAlling the funtion below -> 
+              word_count(text) 
               
+              the result sets is the dictionary shown below:
+{'This': 2, 'is': 1, 'the': 3, 'text.': 1, 'contains': 1, 'strings': 1, 'to': 1, 'check': 1, 
+'method': 1, 'that': 1, 'counts': 1, 'unique': 1, 'words': 1, 'in': 1, 'text': 1}
+
+              
+              
+        step2: to lower all the words and to escape or ignore the extra characters like _/.#$ in words
+        
+        text = "This is the text. this contains strings to check the method that counts the unique words in text"
+                def count_words(text):
+                    """count the number of times each word occurs in text(str)l. Return dictionary
+                    where keys are unique words and values are word counts. skip punctuation"""
+                    text = text.lower()
+                    skips = [".", ":", ";", "'", '"']
+                    #The next step
+                    #for us, is loop over all of the skip characters
+                    #and replace them with an empty string. This calls for a for loop.
+                    for ch in skips:
+                        text = text.replace(ch, "")
+
+                    word_count = {}
+                    for word in text.split(" "):
+                        if word in word_count:
+                            word_count[word] += 1
+                        else:
+                            word_count[word] = 1
+                    return word_count
+                    
+           CAlling the funtion below -> 
+              word_count(text) 
+              
+              the result sets is the dictionary shown below:
+                  {'this': 2, 'is': 1, 'the': 3, 'text': 2, 'contains': 1, 'strings': 1, 
+                  'to': 1, 'check': 1, 'method': 1, 'that': 1, 'counts': 1, 'unique': 1, 'words': 1, 'in': 1}
+
+          step 3: modifying the function to use counter object, importing counter from collections to get the same result
+          from collections import Counter
+                def count_words_fast(text):
+                    """count the number of times each word occurs in text(str)l. Return dictionary
+                    where keys are unique words and values are word counts. skip punctuation"""
+                    text = text.lower()
+                    skips = [".", ":", ";", "'", '"']
+                    #The next step
+                    #for us, is loop over all of the skip characters
+                    #and replace them with an empty string. This calls for a for loop.
+                    for ch in skips:
+                        text = text.replace(ch, "")
+
+                    word_count = Counter(text.split(" "))
+                    return word_count
+                    
+                    
+                object return by this funtion is the same
+                
+               he result sets is the dictionary shown below:
+                  {'this': 2, 'is': 1, 'the': 3, 'text': 2, 'contains': 1, 'strings': 1, 
+                  'to': 1, 'check': 1, 'method': 1, 'that': 1, 'counts': 1, 'unique': 1, 'words': 1, 'in': 1}
+                  
+              checking whether this funtions returns the same object:
+              count_words(text) == count_words_fast(text)
+                                True
+                                
+                                
+
+
+                   
+
         

@@ -90,5 +90,118 @@
 
 
                    
-
+        - Learn how to navigate file directories and read in multiple files/books at once
+        - Get a brief introduction to pandas, which provides additional data structure and 
+        data analysis functionalities for Python.
+        
+        
+        
+           pandas is a library that provides additional data structures and data
+    analysis functionalities for Python.
+    It's especially useful for manipulating numerical tables and time series data.
+    pandas gets its name from the term panel data
+    used to refer to multi-dimensional structured data sets.
+    Let's create a simple table using pandas.
+    We'll first import pandas as pd which is the convention.
+    We then want to create a table.
+    The most common data structure in pandas is what's called a data frame.
+    This is very similar to the data frame structure
+    you might have seen before in R.
+    This case, we'll simply demonstrate how to create a table using
+    the pandas DataFrame function.
+    I'm going to call my table, simply, table.
+    We need the DataFrame command.
+    And inside, we need to specify the columns of our table.
+    Let's have a table that has only two columns.
+    The first one being name and the second one being age.
+    Now we can add new entries to our table based on the location of these entries.
+    Let's see how that works.
+    We do this by first typing table.
+    And we can specify the location, within the table, where we
+    would like the following entry to go.
+    I'm going to start at location one.
+    And you can think of that as the row one of table.
+    The first entry is a name.
+    So it has to be a string.
+    Let's say James.
+    The second might be age.
+    Let's say 22.
+    I can add a second entry.
+    A second row to my table.
+    I need to modify the location.
+    Let's change the name.
+    Let's have Jess.
+    Let's say Jess is 32.
+    And now we have two entries in my table.
+    I can inspect my data object by typing its name, which in this case, is table.
+    To get the columns of my table, I can type table.colums.
+    In this case, I had only two columns: name and age.
+    We can now use pandas data frame to keep track of our book statistics.
+    Let's see how that works.
+    Let's go back to our previous code.
+    I first need to do the import statement here so I can use pandas.
+    And the next step is to create an empty table.
+    I'm going to call that table stats.
+    It's a data frame.
+    And I want to define the names of the columns.
+    And in this case, we'll define a few columns.
+    I'll call them "language", "author", "title", "length".
+    And I'm missing a quote there.
+    And "unique".
+    And we'll put that in quotes as well.
+    You can capitalize these terms to your liking.
+    In this case, I'm just doing everything lower case.
+    This line will create an empty date frame, an empty table,
+    that has these five columns.
+    To add data to our table, we also need to keep track of the role of the table.
+    To do this, we'll define a variable called title_num.
+    And we're going to start that with 1.
+    To start the data in our table, we need to add a line at the end of our code.
+    We use the same syntax as before.
+    We insert the new line, new row, and the specific location.
+    In this case, we'll use title_num.
+    And before we forget, we have to make sure to increase
+    that counter once we're done.
+    And we insert, to this specific location,
+    some of the elements that we care about.
+    Language is our first column.
+    Author, our second.
+    Title, our third.
+    Then we need to add the length of the book,
+    meaning the number of words in that book.
+    We've seen how to use this before.
+    We're just summing over the counts that we obtained before.
+    And finally, we'll add num_unique here.
+    And with that, we should be done.
+    We can then run our code.
+    And we can see that it seems to run.
+    Let's now look at our table which is called stats.
+    In this case, we can see that the data frame has 102 rows and five columns.
+    If you have a large table, it will probably not
+    fit on the screen in one go.
+    That's why it's helpful to be able to look at the top five, or bottom five,
+    rows of your table.
+    Let's look at our stats table.
+    Head gives us the top five lines.
+    And tail gives us the bottom five lines.
+    In this case, it looks like our table is correctly populated.
+    Looking at the table, I would like to make two small modifications.
+    First, I would like to make sure that the authors always appear capitalized
+    in the table.
+    Second, I would like to get rid of the .txt file extension in the title
+    of the books.
+    Let's modify our code accordingly.
+    Author name is the second column in our table.
+    To capitalize this, you can just say capitalize.
+    To modify the title, we replace .txt with an empty string.
+    Now the other names will appear capitalized and the titles will appear
+    without the .txt.
+    Let's fix that comma into a period.
+    Let's try running this again.
+    Python has just read over 100 books for us.
+    We also got the head.
+    Now I just got the tail of the table.
+    So we got rid of the .txt file extensions and the others now appear
+    capitalized.
+   
         
